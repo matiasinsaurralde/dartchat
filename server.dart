@@ -3,6 +3,8 @@ import 'package:redis_client/redis_client.dart';
 import 'dart:io';
 import 'dart:convert';
 
+const REDIS_SERVER = '127.0.0.1:6379';
+
 void main() {
   
   print("Starting.");
@@ -14,7 +16,7 @@ void main() {
       WebSocketTransformer.upgrade(req).then((WebSocket websocket) {
 
         websocket.listen( ( rawData ) {
-          RedisClient.connect( '127.0.0.1:6379' ).then( (redis) {
+          RedisClient.connect( REDIS_SERVER ).then( (redis) {
             redis.publish( 'chat', rawData );
             redis.close();
           });
@@ -22,7 +24,7 @@ void main() {
           var data = JSON.decode(rawData); 
         });
         
-        RedisClient.connect( '127.0.0.1:6379').then( (redis) {
+        RedisClient.connect( REDIS_SERVER ).then( (redis) {
           redis.subscribe( ['chat'], (Receiver message) {
             message.receiveMultiBulkStrings().then((List<String> message){
               websocket.add( message.last );
