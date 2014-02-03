@@ -1,7 +1,6 @@
 name: chatTest
 description: A sample web application
 dependencies:
-  async: any
   browser: any
   css_animation: any
   redis_client:
