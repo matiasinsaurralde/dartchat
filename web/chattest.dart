@@ -3,10 +3,7 @@ import 'dart:convert';
 import 'package:css_animation/css_animation.dart';
 
 void main() {
-  
-/*  querySelector("#sample_text_id")
-    ..text = "Click me!"
-    ..onClick.listen(reverseText);*/
+
   var ws = new WebSocket( 'ws://127.0.0.1:5000/chat');
   
   var welcomeBox = querySelector('#welcome');
