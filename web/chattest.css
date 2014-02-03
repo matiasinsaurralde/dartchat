@@ -12,16 +12,39 @@ h1, p {
   color: #333;
 }
 
-#sample_container_id {
+#welcome {
+  background-color: #f0f0f0;
+  position: fixed;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  left: 35%;
+  z-index: 1;
+}
+
+#chat, #messageForm input {
   width: 100%;
-  height: 400px;
   position: relative;
   border: 1px solid #ccc;
   background-color: #fff;
 }
 
-#sample_text_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
+#messageForm input {
+  
+}
+
+#chat {
+  height: 400px;
+}
+
+#chat p {
+  background-color: #d0d0d0;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 20px;
+}
+
+#messageForm input {
 }

@@ -1,5 +1,8 @@
 name: chatTest
 description: A sample web application
 dependencies:
+  async: any
   browser: any
-  redis_client: any
+  css_animation: any
+  redis_client:
+    git: git@github.com:dartist/redis_client.git

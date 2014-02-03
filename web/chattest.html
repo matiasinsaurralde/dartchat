@@ -9,11 +9,24 @@
   <body>
     <h1>Chat</h1>
     
-    <p>Hello world from Dar!</p>
-    
-    <div id="sample_container_id">
-      <p id="sample_text_id"></p>
+    <div id="welcome">
+      <h3>Type a nickname:</h3>
+      <form>
+        <p>
+          <input type="text" id="nickname" />
+        </p>
+        <p><input type="button" id="enterButton" value="Enter!" on-click="{{enterChat}}" /></p>
+      </form>
     </div>
+    
+    <div id="chat">  
+    </div>
+    
+    <form id="messageForm">
+      <p>
+        <input type="text" />
+      </p>
+    </form>
 
     <script type="application/dart" src="chattest.dart"></script>
     <script src="packages/browser/dart.js"></script>
